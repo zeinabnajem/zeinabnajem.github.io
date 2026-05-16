@@ -47,7 +47,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #7C3AED;
+            color: #06B6D4;
         }
 
         .nav-links {
@@ -143,21 +143,36 @@
 
         .cta-button {
             display: inline-block;
-            background: #7C3AED;
-            color: #F8FAFC;
-            padding: 15px 40px;
+            padding: 15px 35px;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: bold;
             transition: all 0.3s ease;
+        }
+
+        .cta-button.primary {
+            background: #7C3AED;
+            color: #F8FAFC;
             box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
         }
 
-        .cta-button:hover {
+        .cta-button.primary:hover {
             transform: translateY(-2px);
             background: #6D28D9;
             box-shadow: 0 8px 25px rgba(124, 58, 237, 0.6);
+        }
+
+        .cta-button.secondary {
+            background: rgba(6, 182, 212, 0.1);
+            color: #06B6D4;
+            border: 1px solid rgba(6, 182, 212, 0.4);
+        }
+
+        .cta-button.secondary:hover {
+            transform: translateY(-2px);
+            background: rgba(6, 182, 212, 0.2);
+            box-shadow: 0 5px 15px rgba(6, 182, 212, 0.2);
         }
 
         /* Skills Section */
@@ -423,36 +438,39 @@
                     <img src="profile.jpg" alt="Zeinab Najem" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"> 
                 </div>
                 <h1>Zeinab Najem</h1>
-                <h2>AI Engineer [cite: 2]</h2>
-                <p>Computer Science graduate specializing in Machine Learning, Deep Learning, and building advanced LLM agents[cite: 5, 35, 38, 41]. Passionate about transforming sophisticated data architectures into scalable digital solutions.</p>
-                <a href="#projects" class="cta-button">View My Work</a>
+                <h2>AI Engineer on the way</h2>
+                <p>Computer Science graduate currently continuing specialized training and studies in Artificial Intelligence. Merging solid core software foundational theories with focused studies in deep learning architectures, computer vision pipelines, and multi-agent frameworks. <strong>Actively seeking an internship opportunity to transition into technical enterprise environments.</strong></p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="cta-button primary">View My Work</a>
+                    <a href="#contact" class="cta-button secondary">Open for Internships</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="skills" class="skills-section">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 2rem;">Technical Toolkit [cite: 30]</h2>
+            <h2 class="section-title" style="margin-bottom: 2rem;">Technical Toolkit</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>LLM & Agents [cite: 38]</h3>
+                    <h3>LLM & Agents</h3>
                     <p>Fine-tuning, Prompt Engineering, Multi-Agent Systems, CrewAI [cite: 39, 41]</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Computer Vision [cite: 33]</h3>
-                    <p>Object Detection, Image Classification, Segmentation, OpenCV [cite: 34, 41]</p>
+                    <h3>Computer Vision</h3>
+                    <p>Object Detection, Image Classification, Segmentation, OpenCV</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Machine & Deep Learning [cite: 35, 37]</h3>
-                    <p>Supervised/Unsupervised Learning, TensorFlow, Keras, PyTorch, Transformers [cite: 36, 41]</p>
+                    <h3>Machine & Deep Learning</h3>
+                    <p>Supervised/Unsupervised Learning, TensorFlow, Keras, PyTorch, Transformers</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Core Programming [cite: 31]</h3>
-                    <p>Python, JavaScript, Dart, PHP, SQL, React [cite: 32]</p>
+                    <h3>Core Programming</h3>
+                    <p>Python, JavaScript, Dart, PHP, SQL, React</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Data Engineering [cite: 42]</h3>
-                    <p>Pandas, NumPy, Matplotlib, Seaborn, MySQL [cite: 22, 42]</p>
+                    <h3>Data Engineering</h3>
+                    <p>Pandas, NumPy, Matplotlib, Seaborn, MySQL</p>
                 </div>
             </div>
         </div>
@@ -460,120 +478,105 @@
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Engineering Projects [cite: 8]</h2>
+            <h2 class="section-title">Featured Engineering Projects</h2>
             <div class="projects-grid">
                 
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">LLM & Multi-Agent [cite: 47]</div>
-                        <h3>Intelligent RAG & Agentic Assistants [cite: 49, 50]</h3>
+                        <div class="project-tag">LLM & Multi-Agent</div>
+                        <h3>Intelligent RAG & Agentic Assistants </h3>
                         <p class="project-description">
-                            Developed a suite of autonomous language tools including a RAG-Powered Assistant for PDF analysis, a structured Calendar and HR tool-calling assistant, and a collaborative multi-agent Travel Assistant[cite: 49, 50, 51].
+                            Developed a suite of autonomous language tools including a RAG-Powered Assistant for PDF analysis, a structured Calendar and HR tool-calling assistant, and a collaborative multi-agent Travel Assistant.
                         </p>
                     </div>
                     <div>
                         <div class="project-details">
                             <h4>Technologies:</h4>
-                            <p>CrewAI, Multi-Agent Systems, Tool-Calling, Vector Embeddings [cite: 41, 50, 51]</p>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
+                            <p>CrewAI, Multi-Agent Systems, Tool-Calling, Vector Embeddings</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">Computer Vision [cite: 46]</div>
-                        <h3>Real-Time Hard-Hat Detection [cite: 48]</h3>
+                        <div class="project-tag">Computer Vision </div>
+                        <h3>Real-Time Hard-Hat Detection </h3>
                         <p class="project-description">
-                            An industrial safety visual application designed to detect safety equipment compliance on construction fields in active real-time video streaming inputs[cite: 48].
+                            An industrial safety visual application designed to detect safety equipment compliance on construction fields.
                         </p>
                     </div>
                     <div>
                         <div class="project-details">
                             <h4>Technologies:</h4>
-                            <p>YOLO, Object Detection, OpenCV, Python [cite: 34, 41, 48]</p>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
+                            <p>YOLO, Object Detection, OpenCV, Python</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">Mobile App [cite: 11]</div>
-                        <h3>Speech to Text Native Application [cite: 9]</h3>
+                        <div class="project-tag">Mobile App</div>
+                        <h3>Speech to Text Native Application</h3>
                         <p class="project-description">
-                            A smart cross-platform mobile application that effortlessly records and parses spoken phrases into high-fidelity textual transcriptions for seamless utility note-taking[cite: 11].
+                            A smart cross-platform mobile application that effortlessly records and parses spoken phrases into high-fidelity textual transcriptions for seamless utility note-taking.
                         </p>
                     </div>
                     <div>
                         <div class="project-details">
                             <h4>Technologies:</h4>
-                            <p>Dart, Flutter, Node.js, Express, JavaScript [cite: 12]</p>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
+                            <p>Dart, Flutter, Node.js, Express, JavaScript</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">Deep Learning [cite: 26]</div>
-                        <h3>Chest X-Ray Disease Detection [cite: 29]</h3>
+                        <div class="project-tag">Deep Learning </div>
+                        <h3>Chest X-Ray Disease Detection </h3>
                         <p class="project-description">
-                            Medical deep neural net model designed to examine and identify indicators of pulmonary abnormalities and diseases directly from chest X-Ray scans[cite: 29].
+                            Medical deep neural net model designed to examine and identify indicators of pulmonary abnormalities and diseases directly from chest X-Ray scans.
                         </p>
                     </div>
                     <div>
                         <div class="project-details">
                             <h4>Technologies:</h4>
-                            <p>Deep Learning, Image Classification, TensorFlow/PyTorch [cite: 26, 34, 41]</p>
+                            <p>Deep Learning, Image Classification, TensorFlow/PyTorch </p>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+                    
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">Machine Learning [cite: 23]</div>
-                        <h3>Advanced Predictive & Clustering Suite [cite: 24, 25]</h3>
+                        <div class="project-tag">Machine Learning </div>
+                        <h3>Advanced Predictive & Clustering Suite </h3>
                         <p class="project-description">
-                            A rich package of standalone algorithms including credit card transaction anomaly detection, news clustering, Titanic survivor predictive classifiers, and a custom KMeans scratch code engine[cite: 24, 25].
+                            A rich package of standalone algorithms including credit card transaction anomaly detection, news clustering, Titanic survivor predictive classifiers, and a custom KMeans scratch code engine.
                         </p>
                     </div>
                     <div>
                         <div class="project-details">
                             <h4>Technologies:</h4>
-                            <p>Python, Scikit-Learn, Pandas, NumPy, Anomaly Detection [cite: 25, 32, 42]</p>
+                            <p>Python, Scikit-Learn, Pandas, NumPy, Anomaly Detection</p>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+               
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">Web Systems [cite: 18]</div>
-                        <h3>Interactive Web Platforms [cite: 19, 20]</h3>
+                        <div class="project-tag">Web Systems </div>
+                        <h3>Interactive Web Platforms</h3>
                         <p class="project-description">
-                            Engineered dynamic websites including a Digital Company appointment management system and an interactive Kids Meal Recipe portal backed by secure role architectures[cite: 19, 20, 21].
+                            Engineered dynamic websites including a Digital Company appointment management system and an interactive Kids Meal Recipe portal backed by secure role architectures.
                         </p>
                     </div>
                     <div>
                         <div class="project-details">
                             <h4>Technologies:</h4>
-                            <p>HTML, CSS, JavaScript, PHP, XAMPP, MySQL [cite: 22]</p>
+                            <p>HTML, CSS, JavaScript, PHP, XAMPP, MySQL</p>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -583,12 +586,12 @@
 
     <section id="education" class="education-section">
         <div class="container">
-            <h2 class="section-title">Education [cite: 4]</h2>
+            <h2 class="section-title">Education </h2>
             <div class="edu-card">
-                <h3>Bachelor of Science in Computer Science [cite: 5]</h3>
-                <h4>LIU - Lebanese International University [cite: 6]</h4>
-                <p><strong>Timeline:</strong> Oct 2022 - Jun 2025 [cite: 6]</p>
-                <p style="margin-top: 0.5rem; color: #06B6D4; font-weight: bold; font-size: 1.1rem;">GPA: 3.56 [cite: 7]</p>
+                <h3>Bachelor of Science in Computer Science</h3>
+                <h4>LIU - Lebanese International University</h4>
+                <p><strong>Timeline:</strong> Oct 2022 - Jun 2025 </p>
+                <p style="margin-top: 0.5rem; color: #06B6D4; font-weight: bold; font-size: 1.1rem;">GPA: 3.56 </p>
             </div>
         </div>
     </section>
@@ -596,11 +599,10 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Let's Connect</h2>
-            <p>Based in Nabatieh, Lebanon. Available for innovative roles, project collaborations, and AI implementation pipelines[cite: 3].</p>
-            <div class="social-buttons">
+            <p>Based in Nabatieh, Lebanon. I am actively seeking an AI Engineering <strong>internship</strong> to apply my expanding skills and contribute to production workflows while completing my advanced AI studies.</p> <div class="social-buttons">
                 <a href="mailto:zeinabnajem198@gmail.com" class="contact-btn">Email Me</a>
-                <a href="#" class="contact-btn">LinkedIn Profile</a>
-                <a href="#" class="contact-btn">GitHub Profile</a>
+                <a href="https://github.com/zeinabnajem" class="contact-btn">LinkedIn Profile</a>
+                <a href="www.linkedin.com/in/zeinab-najem" class="contact-btn">GitHub Profile</a>
             </div>
         </div>
     </section>
