@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeinab Najem - Portfolio</title>
+    <meta name="description" content="Zeinab Najem - Junior AI Engineer specializing in LLMs, RAG, and AI Agents.">
+    <title>Zeinab Najem | Junior AI Engineer</title>
+
     <style>
         * {
             margin: 0;
@@ -11,12 +13,20 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #F8FAFC;
-            background-color: #0B1020;
+            background: #0B1020;
             min-height: 100vh;
+        }
+
+        a {
+            color: inherit;
         }
 
         .container {
@@ -25,7 +35,9 @@
             padding: 0 20px;
         }
 
-        /* Header Navigation */
+        /* =========================
+           HEADER
+        ========================== */
         header {
             position: fixed;
             top: 0;
@@ -67,12 +79,18 @@
             color: #06B6D4;
         }
 
-        /* Hero Section */
+        /* =========================
+           HERO
+        ========================== */
         .hero {
-            padding: 150px 0 80px;
+            padding: 150px 0 90px;
             text-align: center;
             color: #F8FAFC;
-            background: linear-gradient(135deg, #0B1020 0%, rgba(124, 58, 237, 0.2) 100%);
+            background: linear-gradient(
+                135deg,
+                #0B1020 0%,
+                rgba(124, 58, 237, 0.2) 100%
+            );
             position: relative;
             overflow: hidden;
         }
@@ -84,14 +102,22 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+            background: radial-gradient(
+                circle,
+                rgba(6, 182, 212, 0.1) 1px,
+                transparent 1px
+            );
             background-size: 50px 50px;
             animation: float 20s infinite linear;
         }
 
         @keyframes float {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-50px, -50px); }
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-50px, -50px);
+            }
         }
 
         .hero-content {
@@ -118,6 +144,14 @@
             transform: scale(1.05);
         }
 
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 0.5rem;
@@ -133,12 +167,22 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.15rem;
+            margin: 0 auto 2rem;
+            max-width: 760px;
             color: #94A3B8;
+        }
+
+        .hero-highlight {
+            color: #F8FAFC;
+            font-weight: 600;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .cta-button {
@@ -175,49 +219,9 @@
             box-shadow: 0 5px 15px rgba(6, 182, 212, 0.2);
         }
 
-        /* Skills Section */
-        .skills-section {
-            padding: 60px 0;
-            background: rgba(148, 163, 184, 0.05);
-            color: #F8FAFC;
-            border-top: 1px solid rgba(148, 163, 184, 0.1);
-            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
-            background: rgba(11, 16, 32, 0.7);
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #06B6D4;
-            border-top: 1px solid rgba(148, 163, 184, 0.05);
-            border-right: 1px solid rgba(148, 163, 184, 0.05);
-            border-bottom: 1px solid rgba(148, 163, 184, 0.05);
-        }
-
-        .skill-category h3 {
-            color: #7C3AED;
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-        }
-
-        .skill-category p {
-            font-size: 0.95rem;
-            color: #94A3B8;
-        }
-
-        /* Projects Section */
-        .projects {
-            padding: 80px 0;
-            background: #0B1020;
-        }
-
+        /* =========================
+           SECTION GENERAL
+        ========================== */
         .section-title {
             text-align: center;
             font-size: 2.5rem;
@@ -235,11 +239,65 @@
             width: 80px;
             height: 4px;
             background: #7C3AED;
+            border-radius: 4px;
+        }
+
+        /* =========================
+           SKILLS
+        ========================== */
+        .skills-section {
+            padding: 80px 0;
+            background: rgba(148, 163, 184, 0.05);
+            color: #F8FAFC;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(11, 16, 32, 0.7);
+            padding: 1.6rem;
+            border-radius: 10px;
+            border-left: 4px solid #06B6D4;
+            border-top: 1px solid rgba(148, 163, 184, 0.05);
+            border-right: 1px solid rgba(148, 163, 184, 0.05);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-4px);
+            border-left-color: #7C3AED;
+        }
+
+        .skill-category h3 {
+            color: #7C3AED;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-category p {
+            font-size: 0.95rem;
+            color: #94A3B8;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================== */
+        .projects {
+            padding: 90px 0;
+            background: #0B1020;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -263,7 +321,7 @@
         }
 
         .project-tag {
-            align-self: flex-start;
+            display: inline-block;
             background: rgba(6, 182, 212, 0.1);
             color: #06B6D4;
             padding: 4px 12px;
@@ -288,7 +346,7 @@
         }
 
         .project-details {
-            margin-bottom: 1.5rem;
+            margin-top: auto;
             background: rgba(124, 58, 237, 0.05);
             padding: 1rem;
             border-radius: 8px;
@@ -306,62 +364,89 @@
             color: #94A3B8;
         }
 
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: auto;
-        }
-
-        .project-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: rgba(148, 163, 184, 0.1);
-            color: #F8FAFC;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
+        /* =========================
+           OTHER PROJECTS
+        ========================== */
+        .other-projects {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: rgba(148, 163, 184, 0.03);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 15px;
             text-align: center;
-            flex: 1;
-            border: 1px solid rgba(148, 163, 184, 0.2);
         }
 
-        .project-link:hover {
-            background: #06B6D4;
-            color: #0B1020;
-            border-color: #06B6D4;
+        .other-projects h3 {
+            color: #06B6D4;
+            margin-bottom: 1rem;
         }
 
-        /* Education Section */
+        .other-projects p {
+            color: #94A3B8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================== */
         .education-section {
-            padding: 60px 0;
+            padding: 90px 0;
             background: rgba(148, 163, 184, 0.02);
-            text-align: center;
             border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 950px;
+            margin: 0 auto;
         }
 
         .edu-card {
             background: rgba(148, 163, 184, 0.04);
-            padding: 2.5rem;
+            padding: 2.2rem;
             border-radius: 15px;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             border-top: 5px solid #7C3AED;
             border-left: 1px solid rgba(148, 163, 184, 0.05);
             border-right: 1px solid rgba(148, 163, 184, 0.05);
             border-bottom: 1px solid rgba(148, 163, 184, 0.05);
         }
 
-        .edu-card h3 { color: #F8FAFC; font-size: 1.4rem; margin-bottom: 0.5rem; }
-        .edu-card h4 { color: #06B6D4; font-weight: normal; margin-bottom: 0.5rem; }
-        .edu-card p { color: #94A3B8; font-size: 0.95rem; }
+        .edu-card h3 {
+            color: #F8FAFC;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
 
-        /* Contact Section */
+        .edu-card h4 {
+            color: #06B6D4;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-card p {
+            color: #94A3B8;
+            font-size: 0.95rem;
+        }
+
+        .edu-date {
+            margin-top: 0.7rem;
+            color: #94A3B8;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
         .contact {
-            padding: 80px 0;
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, #0B1020 100%);
+            padding: 90px 0;
+            background: linear-gradient(
+                135deg,
+                rgba(124, 58, 237, 0.1) 0%,
+                #0B1020 100%
+            );
             color: #F8FAFC;
             text-align: center;
             border-top: 1px solid rgba(148, 163, 184, 0.1);
@@ -374,8 +459,9 @@
         }
 
         .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            margin: 0 auto 2.5rem;
+            max-width: 750px;
             color: #94A3B8;
         }
 
@@ -407,20 +493,69 @@
             box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
         }
 
-        /* Responsive Design */
+        /* =========================
+           FOOTER
+        ========================== */
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: #080C18;
+            color: #64748B;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(148, 163, 184, 0.08);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero h2 { font-size: 1.4rem; }
-            .projects-grid { grid-template-columns: 1fr; }
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 125px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.35rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .projects-grid,
+            .skills-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
+
 <body>
 
+    <!-- =========================
+         HEADER
+    ========================== -->
     <header>
         <nav class="container">
             <div class="logo">Zeinab Najem</div>
+
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -431,189 +566,361 @@
         </nav>
     </header>
 
+
+    <!-- =========================
+         HERO
+    ========================== -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+
                 <div class="profile-image">
-                    <img src="profile.jpg" alt="Zeinab Najem" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"> 
+                    <img src="profile.jpg" alt="Zeinab Najem">
                 </div>
+
                 <h1>Zeinab Najem</h1>
-                <h2>AI Engineer on the way</h2>
-                <p>Computer Science graduate currently continuing specialized training and studies in Artificial Intelligence. Merging solid core software foundational theories with focused studies in deep learning architectures, computer vision pipelines, and multi-agent frameworks. <strong>Actively seeking an internship opportunity to transition into technical enterprise environments.</strong></p>
+
+                <h2>Junior AI Engineer | LLMs · RAG · AI Agents</h2>
+
+                <p>
+                    Junior AI Engineer specializing in
+                    <span class="hero-highlight">LLMs, Retrieval-Augmented Generation (RAG), and AI Agents</span>.
+                    I build AI-powered solutions that connect language models with
+                    real-world data, tools, and workflows.
+                </p>
+
                 <div class="hero-buttons">
-                    <a href="#projects" class="cta-button primary">View My Work</a>
-                    <a href="#contact" class="cta-button secondary">Open for Internships</a>
+                    <a href="#projects" class="cta-button primary">
+                        View My Projects
+                    </a>
+
+                    <a href="#contact" class="cta-button secondary">
+                        Let's Connect
+                    </a>
                 </div>
+
             </div>
         </div>
     </section>
 
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
     <section id="skills" class="skills-section">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 2rem;">Technical Toolkit</h2>
+
+            <h2 class="section-title">Technical Toolkit</h2>
+
             <div class="skills-grid">
+
                 <div class="skill-category">
-                    <h3>LLM & Agents</h3>
-                    <p>Fine-tuning, Prompt Engineering, Multi-Agent Systems, CrewAI </p>
+                    <h3>LLMs & Generative AI</h3>
+                    <p>
+                        LLMs, Generative AI, Prompt Engineering, Embeddings,
+                        Structured Outputs, Hugging Face, Fine-tuning
+                    </p>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Computer Vision</h3>
-                    <p>Object Detection, Image Classification, Segmentation, OpenCV</p>
+                    <h3>RAG & AI Agents</h3>
+                    <p>
+                        RAG, Vector Search, LangChain, CrewAI, MCP,
+                        Tool Calling, Multi-Agent Workflows
+                    </p>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Machine & Deep Learning</h3>
-                    <p>Supervised/Unsupervised Learning, TensorFlow, Keras, PyTorch, Transformers</p>
+                    <h3>AI Application Development</h3>
+                    <p>
+                        Python, FastAPI, REST APIs, Docker
+                    </p>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Core Programming</h3>
-                    <p>Python, JavaScript, Dart, PHP, SQL, React</p>
+                    <h3>Machine Learning & NLP</h3>
+                    <p>
+                        Scikit-learn, TF-IDF, Logistic Regression,
+                        Classification, Clustering, Anomaly Detection,
+                        Model Evaluation
+                    </p>
                 </div>
+
                 <div class="skill-category">
-                    <h3>Data Engineering</h3>
-                    <p>Pandas, NumPy, Matplotlib, Seaborn, MySQL</p>
+                    <h3>Frameworks & Libraries</h3>
+                    <p>
+                        TensorFlow, Keras, PyTorch, OpenCV,
+                        Pandas, NumPy, Matplotlib
+                    </p>
                 </div>
+
+                <div class="skill-category">
+                    <h3>Databases & Development Tools</h3>
+                    <p>
+                        PostgreSQL, ChromaDB, Git, GitHub, Docker,
+                        GitHub Copilot, Cursor
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Engineering Projects</h2>
+
+            <h2 class="section-title">Featured AI Projects</h2>
+
             <div class="projects-grid">
-                
+
+                <!-- Project 1 -->
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">LLM & Multi-Agent</div>
-                        <h3>Intelligent RAG & Agentic Assistants </h3>
+                        <div class="project-tag">RAG · LLM</div>
+
+                        <h3>RAG-Powered PDF Assistant</h3>
+
                         <p class="project-description">
-                            Developed a suite of autonomous language tools including a RAG-Powered Assistant for PDF analysis, a structured Calendar and HR tool-calling assistant, and a collaborative multi-agent Travel Assistant.
+                            Built a conversational AI application that enables users
+                            to query PDF documents using Retrieval-Augmented Generation.
+                            Implemented document processing, chunking, embeddings,
+                            vector search, and contextual retrieval.
                         </p>
                     </div>
-                    <div>
-                        <div class="project-details">
-                            <h4>Technologies:</h4>
-                            <p>CrewAI, Multi-Agent Systems, Tool-Calling, Vector Embeddings</p>
-                        </div>
+
+                    <div class="project-details">
+                        <h4>Technologies</h4>
+                        <p>
+                            Python · LangChain · LLMs · ChromaDB · RAG
+                        </p>
                     </div>
                 </div>
 
+
+                <!-- Project 2 -->
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">Computer Vision </div>
-                        <h3>Real-Time Hard-Hat Detection </h3>
+                        <div class="project-tag">LLM · MCP · RAG</div>
+
+                        <h3>HR Assistant – AI Chatbot</h3>
+
                         <p class="project-description">
-                            An industrial safety visual application designed to detect safety equipment compliance on construction fields.
+                            Developed an LLM-powered HR assistant integrating RAG
+                            and external tools for contextual question answering.
+                            Explored MCP to connect the assistant with external
+                            resources and tools.
                         </p>
                     </div>
-                    <div>
-                        <div class="project-details">
-                            <h4>Technologies:</h4>
-                            <p>YOLO, Object Detection, OpenCV, Python</p>
-                        </div>
+
+                    <div class="project-details">
+                        <h4>Technologies</h4>
+                        <p>
+                            Python · LangChain · Gemini · MCP · RAG
+                        </p>
                     </div>
                 </div>
 
+
+                <!-- Project 3 -->
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">Mobile App</div>
-                        <h3>Speech to Text Native Application</h3>
+                        <div class="project-tag">AI Agents · CrewAI</div>
+
+                        <h3>Multi-Agent Travel Assistant</h3>
+
                         <p class="project-description">
-                            A smart cross-platform mobile application that effortlessly records and parses spoken phrases into high-fidelity textual transcriptions for seamless utility note-taking.
+                            Built a multi-agent AI system using specialized agents
+                            for travel research, recommendations, and itinerary
+                            planning through coordinated LLM-powered workflows.
                         </p>
                     </div>
-                    <div>
-                        <div class="project-details">
-                            <h4>Technologies:</h4>
-                            <p>Dart, Flutter, Node.js, Express, JavaScript</p>
-                        </div>
+
+                    <div class="project-details">
+                        <h4>Technologies</h4>
+                        <p>
+                            Python · CrewAI · LLMs · Multi-Agent Systems
+                        </p>
                     </div>
                 </div>
 
+
+                <!-- Project 4 -->
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">Deep Learning </div>
-                        <h3>Chest X-Ray Disease Detection </h3>
+                        <div class="project-tag">AI Agent · Tool Calling</div>
+
+                        <h3>Calendar Assistant – AI Agent</h3>
+
                         <p class="project-description">
-                            Medical deep neural net model designed to examine and identify indicators of pulmonary abnormalities and diseases directly from chest X-Ray scans.
+                            Developed an AI assistant that interprets natural-language
+                            requests and uses LLM tool calling to perform calendar
+                            actions through connected calendar tools.
                         </p>
                     </div>
-                    <div>
-                        <div class="project-details">
-                            <h4>Technologies:</h4>
-                            <p>Deep Learning, Image Classification, TensorFlow/PyTorch </p>
-                        </div>
-                    
+
+                    <div class="project-details">
+                        <h4>Technologies</h4>
+                        <p>
+                            Python · LLMs · Tool Calling · Google Calendar API ·
+                            Gradio · Speech-to-Text
+                        </p>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div>
-                        <div class="project-tag">Machine Learning </div>
-                        <h3>Advanced Predictive & Clustering Suite </h3>
-                        <p class="project-description">
-                            A rich package of standalone algorithms including credit card transaction anomaly detection, news clustering, Titanic survivor predictive classifiers, and a custom KMeans scratch code engine.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="project-details">
-                            <h4>Technologies:</h4>
-                            <p>Python, Scikit-Learn, Pandas, NumPy, Anomaly Detection</p>
-                        </div>
-               
-                    </div>
-                </div>
 
+                <!-- Project 5 -->
                 <div class="project-card">
                     <div>
-                        <div class="project-tag">Web Systems </div>
-                        <h3>Interactive Web Platforms</h3>
+                        <div class="project-tag">NLP · FastAPI</div>
+
+                        <h3>AI Ticket Classification System</h3>
+
                         <p class="project-description">
-                            Engineered dynamic websites including a Digital Company appointment management system and an interactive Kids Meal Recipe portal backed by secure role architectures.
+                            Developed an NLP system for automatically classifying
+                            customer support tickets using TF-IDF and Logistic
+                            Regression. Built and containerized the backend using
+                            FastAPI and Docker.
                         </p>
                     </div>
-                    <div>
-                        <div class="project-details">
-                            <h4>Technologies:</h4>
-                            <p>HTML, CSS, JavaScript, PHP, XAMPP, MySQL</p>
-                        </div>
-                        
+
+                    <div class="project-details">
+                        <h4>Technologies</h4>
+                        <p>
+                            Python · TF-IDF · Logistic Regression · FastAPI ·
+                            PostgreSQL · Docker
+                        </p>
                     </div>
                 </div>
 
             </div>
+
+
+            <!-- Other AI / ML Projects -->
+            <div class="other-projects">
+                <h3>Other AI & Machine Learning Projects</h3>
+
+                <p>
+                    Hard Hat Detection System · Chest X-Ray Disease Detection ·
+                    Credit Card Fraud Detection · Recommendation System ·
+                    News Clustering · Titanic Survival Prediction ·
+                    Heart Disease Classification · K-Means Clustering · Perceptron
+                </p>
+            </div>
+
         </div>
     </section>
 
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
     <section id="education" class="education-section">
         <div class="container">
-            <h2 class="section-title">Education </h2>
-            <div class="edu-card">
-                <h3>Bachelor of Science in Computer Science</h3>
-                <h4>LIU - Lebanese International University</h4>
-                <p><strong>Timeline:</strong> Oct 2022 - Jun 2025 </p>
-                <p style="margin-top: 0.5rem; color: #06B6D4; font-weight: bold; font-size: 1.1rem;">GPA: 3.56 </p>
+
+            <h2 class="section-title">Education</h2>
+
+            <div class="education-grid">
+
+                <div class="edu-card">
+                    <h3>Bachelor of Science in Computer Science</h3>
+
+                    <h4>Lebanese International University (LIU)</h4>
+
+                    <p class="edu-date">
+                        Oct 2022 – Jun 2025
+                    </p>
+                </div>
+
+
+                <div class="edu-card">
+                    <h3>AI Engineer Program</h3>
+
+                    <h4>
+                        Fakker.ai — CPD Standards Office Accredited Activity
+                    </h4>
+
+                    <p class="edu-date">
+                        2026 – Present
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
     <section id="contact" class="contact">
         <div class="container">
+
             <h2>Let's Connect</h2>
-            <p>Based in Nabatieh, Lebanon. I am actively seeking an AI Engineering <strong>internship</strong> to apply my expanding skills and contribute to production workflows while completing my advanced AI studies.</p> <div class="social-buttons">
-                <a href="mailto:zeinabnajem198@gmail.com" class="contact-btn">Email Me</a>
-                <a href="https://linkedin.com/in/zeinab-najem" class="contact-btn">LinkedIn Profile</a>
-                <a href="https://github.com/zeinabnajem" class="contact-btn">GitHub Profile</a>
+
+            <p>
+                I'm open to Junior AI Engineer opportunities where I can
+                contribute to practical AI solutions and continue building
+                expertise in LLMs, RAG, and AI agents.
+            </p>
+
+            <div class="social-buttons">
+
+                <a
+                    href="mailto:zeinabnajem198@gmail.com"
+                    class="contact-btn"
+                >
+                    Email Me
+                </a>
+
+                <a
+                    href="https://linkedin.com/in/zeinab-najem"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-btn"
+                >
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://github.com/zeinabnajem"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-btn"
+                >
+                    GitHub
+                </a>
+
             </div>
         </div>
     </section>
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Zeinab Najem · Junior AI Engineer</p>
+        </div>
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
     <script>
-        // Smooth scrolling animation for internal navigation anchors
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+            anchor.addEventListener('click', function (event) {
                 const target = document.querySelector(this.getAttribute('href'));
+
                 if (target) {
+                    event.preventDefault();
+
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
@@ -622,5 +929,6 @@
             });
         });
     </script>
+
 </body>
 </html>
